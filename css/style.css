@@ -509,7 +509,7 @@
     top: 1%;
     right: 1%;
     cursor: pointer;
-    width: auto!important;
+    width: 25px!important;
 }
 .vwm-content[data-place="langson"] .vwm-text {
     top: 13.5%;

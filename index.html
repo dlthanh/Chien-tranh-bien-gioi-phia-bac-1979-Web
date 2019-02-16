@@ -27,7 +27,12 @@
 
             $('.vwm-close').click(function() {
                 $('.vw-popup').removeClass('show');
-                $(this).parents('.vwm-content').fadeOut(600);
+                $(this).parents('.vwm-content').hide();
+            })
+
+            $('.vw-overlay').click(function() {
+                $('.vw-popup').removeClass('show');
+                $('.vwm-content').hide();
             })
         })
     </script>
@@ -84,9 +89,9 @@
         </div>
 
         <div class="vw-popup">
-            <div class="vw-overlay"></div>
-
             <div class="vw-main">
+                <div class="vw-overlay"></div>
+
                 <div class="vwm-content" data-place="laichau">
                     <img src="images/laichau.jpg" alt="">
 
