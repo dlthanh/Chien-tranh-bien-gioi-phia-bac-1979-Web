@@ -11,19 +11,19 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('.vwcmt-item').hover(function() {
+            $('.vwcm-rect').hover(function() {
                 var place = $(this).attr('data-place');
-                $('.vwcml-item[data-place=' + place + ']').fadeIn(300);
+                $('.vwcml-item[data-place=' + place + ']').css('opacity', '1');
             }, function() {
                 var place = $(this).attr('data-place');
-                $('.vwcml-item[data-place=' + place + ']').fadeOut(300);
-            })
+                $('.vwcml-item[data-place=' + place + ']').css('opacity', '0');
+            });
 
-            $('.vwcmt-item').click(function() {
+            $('.vwcm-rect').click(function() {
                 var place = $(this).attr('data-place');
                 $('.vw-popup').addClass('show');
                 $('.vwm-content[data-place=' + place + ']').fadeIn(300);
-            })
+            });
 
             $('.vwm-close').click(function() {
                 $('.vw-popup').removeClass('show');
@@ -40,17 +40,17 @@
             <img src="images/sapo.png" alt="" class="vwc-credit">
             <img src="images/credit.png" alt="" class="vwc-credit">
 
+            <div class="vwcm-list">
+                <img src="images/laichau.png" alt="" class="vwcml-item" data-place="laichau">
+                <img src="images/laocai.png" alt="" class="vwcml-item" data-place="laocai">
+                <img src="images/hagiang.png" alt="" class="vwcml-item" data-place="hagiang">
+                <img src="images/caobang.png" alt="" class="vwcml-item" data-place="caobang">
+                <img src="images/langson.png" alt="" class="vwcml-item" data-place="langson">
+                <img src="images/quangninh.png" alt="" class="vwcml-item" data-place="quangninh">
+            </div>
+
             <div class="vwc-map">
                 <img src="images/map-frame.png" alt="" class="vwcm-frame">
-
-                <div class="vwcm-list">
-                    <img src="images/laichau.png" alt="" class="vwcml-item" data-place="laichau">
-                    <img src="images/laocai.png" alt="" class="vwcml-item" data-place="laocai">
-                    <img src="images/hagiang.png" alt="" class="vwcml-item" data-place="hagiang">
-                    <img src="images/caobang.png" alt="" class="vwcml-item" data-place="caobang">
-                    <img src="images/langson.png" alt="" class="vwcml-item" data-place="langson">
-                    <img src="images/quangninh.png" alt="" class="vwcml-item" data-place="quangninh">
-                </div>
 
                 <div class="vwcm-dot">
                     <div class="vwcmd-large" data-place="laichau"></div>
@@ -68,6 +68,17 @@
                     <div class="vwcmt-item" data-place="caobang">Cao Bằng</div>
                     <div class="vwcmt-item" data-place="langson">Lạng Sơn</div>
                     <div class="vwcmt-item" data-place="quangninh">Quảng Ninh</div>
+                    <div class="vwcm-rect" data-place="laichau"></div>
+                    <div class="vwcm-rect" data-place="laocai"></div>
+                    <div class="vwcm-rect" data-place="laichau"></div>
+                    <div class="vwcm-rect" data-place="laichau"></div>
+                    <div class="vwcm-rect" data-place="hagiang"></div>
+                    <div class="vwcm-rect" data-place="laocai"></div>
+                    <div class="vwcm-rect" data-place="caobang"></div>
+                    <div class="vwcm-rect" data-place="caobang"></div>
+                    <div class="vwcm-rect" data-place="langson"></div>
+                    <div class="vwcm-rect" data-place="quangninh"></div>
+                    <div class="vwcm-rect" data-place="quangninh"></div>
                 </div>
             </div>
         </div>
@@ -89,6 +100,9 @@
                         <p>Kết thúc đợt chiến đấu này đã có 11 cá nhân và 6 đơn vị chiến đấu trên hướng Lai Châu được phong tặng danh hiệu Anh hùng Lực lượng vũ trang Nhân dân.</p>
                     </div>
 
+                    <div class="vwmc-large"></div>
+                    <div class="vwmc-large"></div>
+
                     <img src="images/close.png" alt="" class="vwm-close">
                 </div>
 
@@ -102,6 +116,15 @@
 
                         <p>Theo công bố chính thức, các lực lượng vũ trang và nhân dân trên mặt trận Hoàng Liên Sơn từ ngày 17/2 đến 18/3/1979 đã loại khỏi vòng chiến 11.500 quân Trung Quốc, đánh thiệt hại nặng 4 tiểu đoàn địch, phá hủy 66 xe tăng, thiết giáp và 189 xe quân sự.</p>
                     </div>
+
+                    <div class="vwmc-large"></div>
+                    <div class="vwmc-large"></div>
+                    <div class="vwmc-large"></div>
+                    <div class="vwmc-large"></div>
+                    <div class="vwmc-large"></div>
+
+                    <div class="vwmc-small"></div>
+                    <div class="vwmc-small"></div>
 
                     <img src="images/close.png" alt="" class="vwm-close">
                 </div>
@@ -117,6 +140,8 @@
                         <p>Kiên quyết đánh trả các đợt tiến công của quân Trung Quốc, sau hơn chục ngày chiến đấu, quân và dân Hà Tuyên đã lập nhiều chiến công, bẻ gãy các mũi tiến công của đối phương. Theo công bố chính thức, trên mặt Hà Tuyên, quân và dân ta đã tiêu diệt khoảng 1.000 địch.</p>
                     </div>
 
+                    <div class="vwmc-large"></div>
+
                     <img src="images/close.png" alt="" class="vwm-close">
                 </div>
 
@@ -130,6 +155,16 @@
 
                         <p>Trong 30 ngày chiến đấu, quân và dân Cao Bằng đã quả cảm, tiêu diệt hơn 18.000 lính, đánh thiệt hại 7 tiểu đoàn, phá hủy 134 xe tăng và xe bọc thép, 23 xe quân sự.</p>
                     </div>
+
+                    <div class="vwmc-large"></div>
+                    <div class="vwmc-large"></div>
+
+                    <div class="vwmc-small"></div>
+                    <div class="vwmc-small"></div>
+                    <div class="vwmc-small"></div>
+                    <div class="vwmc-small"></div>
+                    <div class="vwmc-small"></div>
+                    <div class="vwmc-small"></div>
 
                     <img src="images/close.png" alt="" class="vwm-close">
                 </div>
@@ -147,6 +182,12 @@
                         <p>Trong một tháng, quân và dân Lạng Sơn đã tiêu diệt 19.000 địch, đánh thiệt hại nặng 3 trung đoàn và 4 tiểu đoàn; bắn cháy 128 xe quân sự, phá hủy 95 pháo, súng cối…</p>
                     </div>
 
+                    <div class="vwmc-large"></div>
+
+                    <div class="vwmc-small"></div>
+                    <div class="vwmc-small"></div>
+                    <div class="vwmc-small"></div>
+
                     <img src="images/close.png" alt="" class="vwm-close">
                 </div>
 
@@ -160,6 +201,10 @@
 
                         <p>Cuối tháng 2, đầu tháng 3.1979, quân Trung Quốc mở nhiều đợt tiến công vào các địa bàn, điểm cao biên giới. Bộ đội địa phương, công an nhân dân vũ trang, dân quân tự vệ chiến đấu dũng cảm, đẩy lùi các đợt tiến công, buộc quân Trung Quốc phải rút lui về bên kia biên giới.</p>
                     </div>
+
+                    <div class="vwmc-large"></div>
+                    <div class="vwmc-large"></div>
+                    <div class="vwmc-large"></div>
 
                     <img src="images/close.png" alt="" class="vwm-close">
                 </div>
