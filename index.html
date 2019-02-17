@@ -22,17 +22,37 @@
             $('.vwcm-rect').click(function() {
                 var place = $(this).attr('data-place');
                 $('.vw-popup').addClass('show');
-                $('.vwm-content[data-place=' + place + ']').fadeIn(300);
+                $('.vwm-content[data-place=' + place + ']').fadeIn(300).addClass('show');
             });
 
             $('.vwm-close').click(function() {
                 $('.vw-popup').removeClass('show');
-                $(this).parents('.vwm-content').hide();
+                $(this).parents('.vwm-content').hide().removeClass('show');
             })
 
             $('.vw-overlay').click(function() {
                 $('.vw-popup').removeClass('show');
                 $('.vwm-content').hide();
+            })
+
+            $('.vwm-next').click(function() {
+                var x = $('.vwm-content.show').index() - 3;
+                if (x < 5) {
+                    $('.vwm-content').hide().removeClass('show');
+                    $('.vwm-content').eq(x + 1).show().addClass('show');
+                } else {
+                    return false
+                }
+            })
+
+            $('.vwm-back').click(function() {
+                var x = $('.vwm-content.show').index() - 3;
+                if (x > 0) {
+                    $('.vwm-content').hide().removeClass('show');
+                    $('.vwm-content').eq(x - 1).show().addClass('show');
+                } else {
+                    return false
+                }
             })
         })
     </script>
@@ -91,6 +111,9 @@
         <div class="vw-popup">
             <div class="vw-main">
                 <div class="vw-overlay"></div>
+
+                <div class="vwm-next"></div>
+                <div class="vwm-back"></div>
 
                 <div class="vwm-content" data-place="laichau">
                     <img src="images/laichau.jpg" alt="">
@@ -205,6 +228,8 @@
                         <p>Trước cuộc tiến công của quân Trung Quốc, lực lượng vũ trang tỉnh và các huyện Bình Liêu, Móng Cái, Tiên Yên anh dũng đánh trả, đánh tan hàng chục đợt tiến công của dối phương, giữ vững địa bàn.</p>
 
                         <p>Cuối tháng 2, đầu tháng 3.1979, quân Trung Quốc mở nhiều đợt tiến công vào các địa bàn, điểm cao biên giới. Bộ đội địa phương, công an nhân dân vũ trang, dân quân tự vệ chiến đấu dũng cảm, đẩy lùi các đợt tiến công, buộc quân Trung Quốc phải rút lui về bên kia biên giới.</p>
+
+                        <p class="note">*Bài có sử dụng một số tư liệu của đồng nghiệp</p>
                     </div>
 
                     <div class="vwmc-large"></div>

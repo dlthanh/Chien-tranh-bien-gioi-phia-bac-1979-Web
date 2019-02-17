@@ -352,8 +352,8 @@
     transform: translate(-50%, -50%);
 }
 .vwm-content[data-place="laichau"] .vwmc-large:nth-child(3) {
-    bottom: 24.705882352%;
-    right: 27.631578947%
+    bottom: 53.705882%;
+    right: 5.631579%;
 }
 .vwm-content[data-place="laichau"] .vwmc-large:nth-child(4) {
     bottom: 44.117647058%;
@@ -513,6 +513,30 @@
 }
 .vwm-content[data-place="langson"] .vwm-text {
     top: 13.5%;
+}
+.vwm-next {
+    width: 27px;
+    height: 44px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") !important;
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    margin-top: -22px;
+    cursor: pointer;
+}
+.vwm-back {
+    width: 27px;
+    height: 44px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") !important;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    margin-top: -22px;
+    cursor: pointer;
+}
+.vwm-text .note {
+    font-size: 0.8vw;
+    color: #666
 }
 
 /*@media (max-width: 1680px) {*/
